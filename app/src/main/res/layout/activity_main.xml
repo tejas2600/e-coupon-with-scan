@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/blue">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="4dp">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/pay_icon_layout"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/pay_icon"
+                android:src="@drawable/pay"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginLeft="40dp"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="2dp" />
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pay_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="55dp"
+                android:background="@color/colorPrimary"
+                android:padding="10dp"
+                android:text="pay"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/blue" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:id="@+id/transfer_icon_layout">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/transfer_icon"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:src="@drawable/upi_money_transfer"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginLeft="70dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+                />
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/transfer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:padding="10dp"
+                android:layout_marginLeft="65dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                android:text="Transfer"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textColorHighlight="@color/blue" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="8dp"
+        android:text="₹"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="68sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@+id/top_layout"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/Recent_Transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Recent Transaction"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/amount"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:id="@+id/pBaramount"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/pBartransaction"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
